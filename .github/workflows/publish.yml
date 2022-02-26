@@ -48,11 +48,11 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: LS DEL PROYECTO 📚 <--
+      - name: LS 📚 <--
         working-directory: ./packages/ui
         run: ls -l
       - name: RUNNING SEMANTIC-RELEASE 🚀
-        run: yarn test:npm
+        run: yarn publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
