@@ -51,8 +51,8 @@ jobs:
       - name: LS DEL PROYECTO 📚 <--
         run: ls -l
       - name: RUNNING SEMANTIC-RELEASE 🚀
-        working-directory: ./packages/ui
-        run: yarn semantic-release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: ./packages/ui
+        run: yarn semantic-release
