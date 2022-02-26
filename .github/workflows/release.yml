@@ -8,11 +8,8 @@ on:
       - 'apps/packages/**'
 #ls -l
 jobs:
-  build:
-    name: Build
-    # if: "!contains(github.event.head_commit.message, 'skip ci')"
+  hello_world:
     runs-on: ubuntu-18.04
-
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
