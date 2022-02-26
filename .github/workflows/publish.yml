@@ -46,15 +46,13 @@ jobs:
         with:
           cache: 'yarn'
           node-version: '14'
-          registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: LS DEL PROYECTO 📚 <--
         working-directory: ./packages/ui
         run: ls -l
       - name: RUNNING SEMANTIC-RELEASE 🚀
-        working-directory: ./packages/ui
-        run: yarn publish
+        run: yarn test:npm
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -11,17 +11,18 @@
     "url": "https://github.com/felipetodev/example"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
-    "tsconfig": "*",
     "config": "*",
-    "typescript": "^4.5.3",
     "semantic-release": "^19.0.2",
-    "@semantic-release/changelog": "6.0.1",
-    "@semantic-release/git": "10.0.1"
+    "semantic-release-monorepo": "^7.0.5",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
   },
   "scripts": {
-    "semantic-release": "semantic-release --extends ./.releaserc.json --branches main"
+    "semantic-release": "npx semantic-release -e semantic-release-monorepo"
   },
   "publishConfig": {
     "access": "restricted"
