@@ -55,7 +55,7 @@ jobs:
       - name: MI SEGUNDO LS <--
         run: |
           ls -l
-          npx semantic-release
+          yarn semantic-release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
