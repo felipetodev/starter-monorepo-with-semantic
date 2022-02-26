@@ -10,7 +10,7 @@
     "dev": {
       "cache": false
     },
-    "test:npm": {
+    "semantic-release": {
       "cache": false
     }
   }
