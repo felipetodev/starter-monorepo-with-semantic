@@ -1,14 +1,27 @@
 {
-  "name": "ui",
-  "version": "0.0.0",
+  "name": "designsystemexampleui",
+  "version": "0.0.0-development",
+  "author": "@ZebrandsMX",
   "main": "./index.tsx",
-  "types": "./index.tsx",
   "license": "MIT",
+  "description": "🚀 Design system UI",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felipetodev/example"
+  },
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "tsconfig": "*",
     "config": "*",
-    "typescript": "^4.5.3"
+    "typescript": "^4.5.3",
+    "semantic-release": "^19.0.2"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
