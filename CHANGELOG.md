@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/felipetodev/example/compare/v1.0.0...v1.1.0) (2022-02-26)
+
+
+### Bug Fixes
+
+* change package w.d. ([93fae8b](https://github.com/felipetodev/example/commit/93fae8b249764840bd2490e63ade2b583c16c15b))
+* order or exec ([b1083ab](https://github.com/felipetodev/example/commit/b1083aba97fb0ae2e4a17f3da88d04a78801c563))
+
+
+### Features
+
+* add ui working directory ([147f16d](https://github.com/felipetodev/example/commit/147f16d2a00310c6a950384bc3e19e349df6fae6))
+
 # 1.0.0 (2022-02-26)
 
 
