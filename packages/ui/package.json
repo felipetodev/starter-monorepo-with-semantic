@@ -1,7 +1,7 @@
 {
   "name": "designsystemexampleui",
   "version": "0.0.0-development",
-  "author": "@ZebrandsMX",
+  "author": "@felipetodev",
   "main": "./index.tsx",
   "license": "MIT",
   "description": "🚀 Design system UI",

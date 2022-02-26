@@ -50,8 +50,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: LS DEL PROYECTO 📚 <--
         run: ls -l
-        working-directory: ./packages/ui
       - name: RUNNING SEMANTIC-RELEASE 🚀
+        working-directory: ./packages/ui
         run: yarn semantic-release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
