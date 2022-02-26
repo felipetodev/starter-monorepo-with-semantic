@@ -1,13 +1,53 @@
-name: Testing
-
+name: Release
 on:
   push:
     branches:
-      - main
-  
+      - master
+
 jobs:
-  hello_world:
-    runs-on: ubuntu-18.04
+  build:
+    name: Build, Lint, and Test
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
     steps:
-      - name: Echo the root
-        run: ls ${{ github.workspace }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js v16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Lint code
+        run: yarn lint
+      - name: Run tests
+        run: yarn test
+      - name: Build storybook
+        run: yarn build
+  
+  release:
+    name: Release package
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_SEMANTIC_RELEASE_TOKEN }}
+      - name: Setup Node.js v16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Lint code
+        run: yarn lint
+      - name: Run tests
+        run: yarn test
+      - name: Build storybook
+        run: yarn build
+      - name: Publish in NPM
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
