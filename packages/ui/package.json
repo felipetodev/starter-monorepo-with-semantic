@@ -19,7 +19,7 @@
     "semantic-release": "^19.0.2"
   },
   "scripts": {
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release --extends ./.releaserc.json --branches main"
   },
   "publishConfig": {
     "access": "restricted"
