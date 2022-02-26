@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Echo the root
-        run: ls
+        run: ls ${{ github.workspace }}
