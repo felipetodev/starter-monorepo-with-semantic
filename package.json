@@ -12,7 +12,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "npm:publish": "yarn -w designsystemexampleui publish",
-    "asdf": "yarn worspace designsystemexampleui run semantic-release -e semantic-release-monorepo"
+    "asdf": "yarn workspace designsystemexampleui run semantic-release -e semantic-release-monorepo"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
