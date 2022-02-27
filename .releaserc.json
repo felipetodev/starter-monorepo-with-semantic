@@ -7,7 +7,9 @@
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     ["@semantic-release/npm", {
-      "pkgRoot": "./packages/ui"
+      "pkgRoot": "./packages/ui",
+      "npmPublish": false,
+      "tarballDir": "./packages/ui"
     }],
     "@semantic-release/github",
     "@semantic-release/git"

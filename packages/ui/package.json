@@ -25,6 +25,7 @@
     "semantic-release": "npx semantic-release -e ./.releaserc.json --branches main"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
   }
 }
