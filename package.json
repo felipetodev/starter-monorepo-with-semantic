@@ -11,7 +11,7 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "npm:publish": "semantic-release --extends ./.releaserc.json --branches main"
+    "npm:publish": "semantic-release --extends ./.releaserc.json --branches main --workspace packages/ui"
   },
   "devDependencies": {
     "prettier": "^2.5.1",
