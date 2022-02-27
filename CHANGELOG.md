@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/felipetodev/example/compare/v1.1.0...v1.2.0) (2022-02-27)
+
+
+### Features
+
+* add semantic npm puglin ([b0df07e](https://github.com/felipetodev/example/commit/b0df07e3a97289681ec8a93d22d90230fd2ecf7a))
+
 # [1.1.0](https://github.com/felipetodev/example/compare/v1.0.0...v1.1.0) (2022-02-26)
 
 
