@@ -11,14 +11,16 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "npm:publish": "semantic-release --extends ./.releaserc.json --branches main --workspace packages/ui"
+    "npm:publish": "yarn -w designsystemexampleui publish",
+    "asdf": "yarn worspace designsystemexampleui run semantic-release -e semantic-release-monorepo"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
-    "turbo": "latest",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/npm": "9.0.0"
+    "@semantic-release/npm": "9.0.0",
+    "prettier": "^2.5.1",
+    "semantic-release-monorepo": "^7.0.5",
+    "turbo": "latest"
   },
   "engines": {
     "npm": ">=7.0.0",
