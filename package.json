@@ -11,20 +11,35 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "npm:publish": "yarn -w designsystemexampleui publish",
-    "tst": "npx --workspace designsystemexampleui semantic-release -e semantic-release-monorepo --branches main"
+    "publish:release": "multi-semantic-release --ignore-private-packages",
+    "publish:dry-run": "yarn publish:release --dry-run --debug"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "6.0.1",
-    "@semantic-release/git": "10.0.1",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "multi-semantic-release": "^2.11.1",
     "@semantic-release/npm": "9.0.0",
     "prettier": "^2.5.1",
-    "semantic-release-monorepo": "^7.0.5",
+    "semantic-release": "^19.0.0",
+    "semantic-release-monorepo": "^7.0.0",
     "turbo": "latest"
   },
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "packageManager": "yarn@1.22.15"
+  "packageManager": "yarn@1.22.15",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ]
+  }
 }

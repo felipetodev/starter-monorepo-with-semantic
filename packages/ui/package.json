@@ -11,18 +11,16 @@
     "url": "https://github.com/felipetodev/example"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "6.0.1",
-    "@semantic-release/git": "10.0.1",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "config": "*",
-    "semantic-release": "^19.0.2",
-    "semantic-release-monorepo": "^7.0.5",
+    "semantic-release": "^19.0.0",
+    "semantic-release-monorepo": "^7.0.0",
     "tsconfig": "*",
     "typescript": "^4.5.3"
   },
   "scripts": {
-    "semantic-release": "npx semantic-release -e ./.releaserc.json --branches main"
+    "lint": "yarn lint:js"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
