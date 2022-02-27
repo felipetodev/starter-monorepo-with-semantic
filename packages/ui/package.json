@@ -1,6 +1,6 @@
 {
   "name": "designsystemexampleui",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "author": "@felipetodev",
   "main": "./index.tsx",
   "license": "MIT",
